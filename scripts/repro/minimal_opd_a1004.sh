@@ -5,7 +5,9 @@ set -x
 REPO_ROOT=${REPO_ROOT:-"$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"}
 BASE_DIR=${BASE_DIR:-/data/zhu.ximo/opd_repro}
 
-export CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0,1,2,3}
+export CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-1,2,3}
+IFS=',' read -r -a CUDA_DEVICE_ARRAY <<< "$CUDA_VISIBLE_DEVICES"
+export N_GPUS=${N_GPUS:-${#CUDA_DEVICE_ARRAY[@]}}
 export PYTHONUNBUFFERED=1
 export TOKENIZERS_PARALLELISM=true
 export HYDRA_FULL_ERROR=1
@@ -150,7 +152,7 @@ python3 -m verl.trainer.main_ppo \
   trainer.project_name="$PROJECT_NAME" \
   trainer.experiment_name="$EXPERIMENT_NAME" \
   trainer.validation_data_dir="$PROJECT_PATH/validation_log/$EXPERIMENT_NAME" \
-  trainer.n_gpus_per_node=4 \
+  trainer.n_gpus_per_node="$N_GPUS" \
   trainer.nnodes=1 \
   trainer.save_freq=5 \
   trainer.test_freq=5 \
