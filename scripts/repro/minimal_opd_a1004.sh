@@ -4,8 +4,9 @@ set -x
 
 REPO_ROOT=${REPO_ROOT:-"$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"}
 BASE_DIR=${BASE_DIR:-/data/zhu.ximo/opd_repro}
+MODEL_DIR=${MODEL_DIR:-/data/zhu.ximo/model}
 
-export CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-1,2,3}
+export CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0,1,2,3}
 IFS=',' read -r -a CUDA_DEVICE_ARRAY <<< "$CUDA_VISIBLE_DEVICES"
 export N_GPUS=${N_GPUS:-${#CUDA_DEVICE_ARRAY[@]}}
 export PYTHONUNBUFFERED=1
@@ -50,8 +51,8 @@ export TRAIN_DATASET=${TRAIN_DATASET:-datasets/dapo-math-17k.parquet}
 export TRAIN_DATASET_NAME=${TRAIN_DATASET_NAME:-DAPO-Math-17k-smoke}
 export TEST_DATASET=${TEST_FILE:-'["datasets/test_data/AIME24/test.parquet"]'}
 
-export ACTOR_MODEL_PATH=${ACTOR_MODEL_PATH:-$BASE_DIR/models/Qwen3-1.7B-SFT}
-export REWARD_MODEL_PATH=${REWARD_MODEL_PATH:-$BASE_DIR/models/Qwen3-4B-Base-GRPO}
+export ACTOR_MODEL_PATH=${ACTOR_MODEL_PATH:-$MODEL_DIR/Qwen3-1.7B-SFT}
+export REWARD_MODEL_PATH=${REWARD_MODEL_PATH:-$MODEL_DIR/Qwen3-4B-Base-GRPO}
 export ACTOR_MODEL_NAME=$(basename "$ACTOR_MODEL_PATH")
 export REWARD_MODEL_NAME=$(basename "$REWARD_MODEL_PATH")
 
@@ -98,7 +99,7 @@ python3 -m verl.trainer.main_ppo \
   data.truncation=error \
   data.return_raw_chat=True \
   actor_rollout_ref.model.path="$ACTOR_MODEL_PATH" \
-  actor_rollout_ref.model.use_remove_padding=True \
+  actor_rollout_ref.model.use_remove_padding=False \
   actor_rollout_ref.model.enable_activation_offload=True \
   actor_rollout_ref.model.enable_gradient_checkpointing=True \
   actor_rollout_ref.actor.optim.lr=1e-6 \
@@ -140,7 +141,7 @@ python3 -m verl.trainer.main_ppo \
   +reward_model.reward_kwargs.enable_format_reward="$ENABLE_FORMAT_REWARD" \
   reward_model.model.path="$REWARD_MODEL_PATH" \
   reward_model.model.input_tokenizer=null \
-  reward_model.model.use_remove_padding=True \
+  reward_model.model.use_remove_padding=False \
   reward_model.model.fsdp_config.param_offload=False \
   +reward_model.model.dtype="$MODEL_DTYPE" \
   reward_model.micro_batch_size_per_gpu=1 \
