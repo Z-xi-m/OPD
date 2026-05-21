@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">THUNLP OPD Fig.2 reproduction weighted Avg@16</title>
+  <desc id="desc">Weighted average accuracy over AIME24, AIME25, and AMC23 for base, OPD checkpoints, strict rerun, and teacher reference.</desc>
+  <rect width="920" height="520" fill="#ffffff"/>
+  <text x="52" y="42" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2937">THUNLP OPD Fig.2 Reproduction: Weighted Avg@16</text>
+  <text x="52" y="68" font-family="Arial, sans-serif" font-size="13" fill="#4b5563">Weighted by dataset size: AIME24 30, AIME25 30, AMC23 83. Sampling: n=16, temperature=0.7, top_p=0.95, max_tokens=31744.</text>
+  <line x1="92" y1="430" x2="860" y2="430" stroke="#111827" stroke-width="1.4"/>
+  <line x1="92" y1="110" x2="92" y2="430" stroke="#111827" stroke-width="1.4"/>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#374151">
+    <line x1="88" y1="430" x2="860" y2="430" stroke="#e5e7eb"/>
+    <text x="52" y="434">0.00</text>
+    <line x1="88" y1="366" x2="860" y2="366" stroke="#e5e7eb"/>
+    <text x="52" y="370">0.10</text>
+    <line x1="88" y1="302" x2="860" y2="302" stroke="#e5e7eb"/>
+    <text x="52" y="306">0.20</text>
+    <line x1="88" y1="238" x2="860" y2="238" stroke="#e5e7eb"/>
+    <text x="52" y="242">0.30</text>
+    <line x1="88" y1="174" x2="860" y2="174" stroke="#e5e7eb"/>
+    <text x="52" y="178">0.40</text>
+    <line x1="88" y1="110" x2="860" y2="110" stroke="#e5e7eb"/>
+    <text x="52" y="114">0.50</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12" text-anchor="middle">
+    <rect x="128" y="325.1" width="64" height="104.9" fill="#64748b"/>
+    <text x="160" y="318" fill="#111827">0.164</text>
+    <text x="160" y="455" fill="#374151">Base</text>
+    <rect x="232" y="318.7" width="64" height="111.3" fill="#2563eb"/>
+    <text x="264" y="312" fill="#111827">0.174</text>
+    <text x="264" y="455" fill="#374151">Step 200</text>
+    <rect x="336" y="311.7" width="64" height="118.3" fill="#2563eb"/>
+    <text x="368" y="305" fill="#111827">0.185</text>
+    <text x="368" y="455" fill="#374151">Step 240</text>
+    <rect x="440" y="299.9" width="64" height="130.1" fill="#1d4ed8"/>
+    <text x="472" y="293" fill="#111827">0.203</text>
+    <text x="472" y="455" fill="#374151">Step 260</text>
+    <rect x="544" y="310.3" width="64" height="119.7" fill="#2563eb"/>
+    <text x="576" y="303" fill="#111827">0.187</text>
+    <text x="576" y="455" fill="#374151">Step 279</text>
+    <rect x="648" y="316.4" width="64" height="113.6" fill="#0f766e"/>
+    <text x="680" y="309" fill="#111827">0.177</text>
+    <text x="680" y="455" fill="#374151">Strict 279</text>
+    <rect x="752" y="146.6" width="64" height="283.4" fill="#dc2626"/>
+    <text x="784" y="139" fill="#111827">0.443</text>
+    <text x="784" y="455" fill="#374151">Teacher</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#374151">
+    <rect x="92" y="486" width="12" height="12" fill="#64748b"/><text x="110" y="497">Base</text>
+    <rect x="172" y="486" width="12" height="12" fill="#2563eb"/><text x="190" y="497">OPD checkpoints</text>
+    <rect x="314" y="486" width="12" height="12" fill="#0f766e"/><text x="332" y="497">Strict rerun</text>
+    <rect x="430" y="486" width="12" height="12" fill="#dc2626"/><text x="448" y="497">Teacher reference</text>
+  </g>
+</svg>

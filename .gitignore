@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+*.tar
+*.tar.gz
+*.tmp
+wandb/
+outputs/
+checkpoints/

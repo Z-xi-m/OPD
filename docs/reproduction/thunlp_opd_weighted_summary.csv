@@ -1,0 +1,8 @@
+model,weighted_avg_at_16,aime24_avg_at_16,aime25_avg_at_16,amc23_avg_at_16,source
+qwen3_1p7b_base,0.163902,0.033333,0.033333,0.258283,eval_fig2_enable_thinking_corrected_20260517_053300
+opd_fig2_step200,0.173951,0.037500,0.006250,0.283886,eval_fig2_enable_thinking_corrected_20260517_053300
+opd_fig2_step240,0.184878,0.064583,0.050000,0.277108,eval_fig2_enable_thinking_corrected_20260517_053300
+opd_fig2_step260,0.203234,0.095833,0.043750,0.299699,eval_fig2_enable_thinking_corrected_20260517_053300
+opd_fig2_step279,0.187063,0.087500,0.020833,0.283133,eval_fig2_enable_thinking_corrected_20260517_053300
+qwen3_4b_grpo_teacher,0.442745,0.266667,0.233333,0.582078,eval_fig2_enable_thinking_corrected_20260517_053300
+strict_rerun_opd_step279,0.177448,0.041667,0.035417,0.277861,eval_paper_fig2_base_student_grpo_teacher_dapo_math17k_enable_thinking_step279_20260518

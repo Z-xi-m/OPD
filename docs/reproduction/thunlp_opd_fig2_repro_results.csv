@@ -1,0 +1,22 @@
+model,dataset,avg_at_16,pass_at_16,num_examples,n,temperature,top_p,max_tokens,notes
+qwen3_1p7b_base,AIME24,0.033333,0.033333,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+qwen3_1p7b_base,AIME25,0.033333,0.100000,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+qwen3_1p7b_base,AMC23,0.258283,0.590361,83,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step200,AIME24,0.037500,0.133333,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step200,AIME25,0.006250,0.100000,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step200,AMC23,0.283886,0.662651,83,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step240,AIME24,0.064583,0.133333,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step240,AIME25,0.050000,0.100000,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step240,AMC23,0.277108,0.650602,83,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step260,AIME24,0.095833,0.200000,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step260,AIME25,0.043750,0.066667,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step260,AMC23,0.299699,0.638554,83,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step279,AIME24,0.087500,0.200000,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step279,AIME25,0.020833,0.100000,30,16,0.7,0.95,31744,corrected chat template enable_thinking true
+opd_fig2_step279,AMC23,0.283133,0.662651,83,16,0.7,0.95,31744,corrected chat template enable_thinking true
+qwen3_4b_grpo_teacher,AIME24,0.266667,0.333333,30,16,0.7,0.95,31744,teacher reference
+qwen3_4b_grpo_teacher,AIME25,0.233333,0.300000,30,16,0.7,0.95,31744,teacher reference
+qwen3_4b_grpo_teacher,AMC23,0.582078,0.759036,83,16,0.7,0.95,31744,teacher reference
+strict_rerun_opd_step279,AIME24,0.041667,0.233333,30,16,0.7,0.95,31744,strict upstream-aligned rerun measured later
+strict_rerun_opd_step279,AIME25,0.035417,0.100000,30,16,0.7,0.95,31744,strict upstream-aligned rerun measured later
+strict_rerun_opd_step279,AMC23,0.277861,0.626506,83,16,0.7,0.95,31744,strict upstream-aligned rerun measured later
