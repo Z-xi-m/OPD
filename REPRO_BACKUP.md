@@ -58,13 +58,22 @@ Remote source and scripts:
 /data/zhu.ximo/opd_repro/thunlp_opd/scripts/val/eval/grade.py
 ```
 
-Key outputs are already on `/data` and were not duplicated because the full THUNLP output tree is about 1.9T:
+The large THUNLP output tree was summarized into `docs/reproduction/` and then cleaned from `/data` to avoid keeping about 1.9T of intermediate checkpoints. Historical output paths before cleanup were:
 
 ```text
 /data/zhu.ximo/opd_repro/outputs/thunlp_opd/checkpoints
 /data/zhu.ximo/opd_repro/outputs/thunlp_opd/merged_hf
 /data/zhu.ximo/opd_repro/outputs/thunlp_opd/eval_results
 /data/zhu.ximo/opd_repro/outputs/thunlp_opd/validation_log
+```
+
+The lightweight retained record is:
+
+```text
+docs/reproduction/thunlp_opd_reproduction_record.md
+docs/reproduction/thunlp_opd_fig2_repro_results.csv
+docs/reproduction/thunlp_opd_weighted_summary.csv
+docs/reproduction/thunlp_opd_fig2_weighted.svg
 ```
 
 Model files are expected under:
